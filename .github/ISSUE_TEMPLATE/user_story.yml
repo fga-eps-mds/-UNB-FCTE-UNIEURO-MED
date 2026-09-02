@@ -1,0 +1,86 @@
+name: História de usuário
+description: Proponha uma funcionalidade a partir da necessidade de uma pessoa usuária.
+title: "[USER STORY] "
+labels:
+  - user-story
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descreva a necessidade pelo ponto de vista da pessoa usuária e defina como o resultado será validado.
+
+  - type: textarea
+    id: story
+    attributes:
+      label: História
+      description: Use o formato sugerido abaixo.
+      placeholder: |
+        Como [tipo de pessoa usuária],
+        quero [objetivo ou funcionalidade],
+        para [benefício ou valor gerado].
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e problema
+      description: Explique a necessidade, o cenário atual e quem será beneficiado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Critérios de aceitação
+      description: Escreva condições objetivas, observáveis e testáveis.
+      placeholder: |
+        Cenário: [nome do cenário]
+        Dado que [contexto inicial]
+        Quando [ação]
+        Então [resultado esperado]
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-rules
+    attributes:
+      label: Regras de negócio
+      description: Liste regras, restrições e validações aplicáveis.
+      placeholder: |
+        - Regra 1
+        - Regra 2
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Referências e protótipos
+      description: Adicione links para protótipos, documentos ou issues relacionadas.
+
+  - type: textarea
+    id: technical-notes
+    attributes:
+      label: Observações técnicas
+      description: Registre dependências, riscos, integrações ou sugestões de implementação, quando aplicável.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade sugerida
+      options:
+        - Baixa
+        - Média
+        - Alta
+        - Urgente
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Definição de pronta
+      options:
+        - label: A história expressa valor claro para a pessoa usuária.
+          required: true
+        - label: Os critérios de aceitação podem ser testados.
+          required: true

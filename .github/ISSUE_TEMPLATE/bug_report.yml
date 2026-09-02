@@ -1,0 +1,94 @@
+name: Relato de bug
+description: Informe um erro ou comportamento inesperado.
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar o problema. Forneça detalhes suficientes para que ele possa ser reproduzido.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Descrição do problema
+      description: Explique de forma clara o que aconteceu.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Liste os passos que fazem o problema acontecer.
+      placeholder: |
+        1. Acesse...
+        2. Clique em...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+      description: O que deveria ter acontecido?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento atual
+      description: O que aconteceu de fato? Inclua mensagens de erro, se houver.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidências
+      description: Anexe capturas de tela, vídeos ou logs. Remova dados sensíveis antes de enviar.
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão ou commit
+      description: Informe a versão, branch ou hash do commit em que o erro ocorreu.
+      placeholder: "Exemplo: v1.2.0, main ou a1b2c3d"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Informe sistema operacional, navegador, dispositivo e outras informações relevantes.
+      placeholder: |
+        Sistema operacional:
+        Navegador e versão:
+        Dispositivo:
+        Ambiente (desenvolvimento/homologação/produção):
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidade sugerida
+      options:
+        - Baixa — impacto pequeno, existe contorno simples
+        - Média — funcionalidade parcialmente comprometida
+        - Alta — funcionalidade principal indisponível
+        - Crítica — sistema indisponível, perda de dados ou risco de segurança
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verificações
+      options:
+        - label: Procurei por issues existentes e não encontrei este mesmo problema.
+          required: true
+        - label: Removi dados pessoais, credenciais e outras informações sensíveis das evidências.
+          required: true
