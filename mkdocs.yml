@@ -1,15 +1,79 @@
 site_name: MED-DOCS
+site_description: Documentação do projeto MED, em parceria com a UNIEURO
 site_url: https://fga-eps-mds.github.io/2026.2-UNB-FCTE_UNIEURO_MED-DOCS/
 repo_url: https://github.com/fga-eps-mds/2026.2-UNB-FCTE_UNIEURO_MED-DOCS
 repo_name: fga-eps-mds/MED-DOCS
+edit_uri: edit/main/docs/
 
 theme:
   name: material
   language: pt-BR
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo escuro
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo claro
+
+  font:
+    text: Inter
+    code: Roboto Mono
+
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
     - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
     - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fga-eps-mds/2026.2-UNB-FCTE_UNIEURO_MED-DOCS
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      title: Nesta página
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Início: index.md
+  - Equipe: equipe/equipe.md
