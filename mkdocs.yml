@@ -1,0 +1,15 @@
+site_name: MED-DOCS
+site_url: https://fga-eps-mds.github.io/2026.2-UNB-FCTE_UNIEURO_MED-DOCS/
+repo_url: https://github.com/fga-eps-mds/2026.2-UNB-FCTE_UNIEURO_MED-DOCS
+repo_name: fga-eps-mds/MED-DOCS
+
+theme:
+  name: material
+  language: pt-BR
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+
+nav:
+  - Início: index.md
