@@ -55,3 +55,8 @@ GitHub Pages. Não é necessário rodar deploy manualmente.
 2. Edite os arquivos `.md` em `docs/`.
 3. Rode `mkdocs serve` para conferir localmente e garantir que não há links quebrados.
 4. Abra um Pull Request.
+
+
+## Licença
+
+MIT License - veja [LICENSE](LICENSE).
